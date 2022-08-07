@@ -1,0 +1,24 @@
+.info{
+    
+}
+.Card-conteudo{
+    color: black;
+}
+.Card-image{
+    margin-bottom: 15%;
+}
+.Card-opcoes{
+    width: 200px;
+    border-style: solid;
+    border-color: #d8d9ee;
+    border-radius: 5%;
+    text-align: center;
+    display: block;
+    border-width: 3px;
+    background-color: white;
+}
+
+.Card-opcoes:hover{
+    border-color: #1421d1;
+    transition: 0.4s;
+}

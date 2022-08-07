@@ -1,0 +1,14 @@
+.Opcoes-menu{
+    display: block;
+    margin: 0 auto;
+    max-width: 1000px;
+    margin-top: 10%;
+}
+.Opcoes-menu li{
+    display: inline-block;
+    padding-left: 20px;
+    margin-bottom: 20px;
+}
+.Opcoes-menu li a{
+    text-decoration: none;
+}

@@ -1,17 +1,20 @@
-import "bootstrap/dist/css/bootstrap.min.css"
-import { BrowserRouter, Routes, Route } from "react-router-dom"
-import { Auth } from "./pages/Auth"
-import './styles/App.css'
+import "bootstrap/dist/css/bootstrap.min.css";
+import { useContext, useEffect } from "react";
+import { NavbarUser } from "./components/navbar/NavbarUser";
+import TokenContext from "./context/TokenContext";
+import { Router } from "./Router";
+import "./styles/App.css";
 
 function App() {
-
+  const tokenContext = useContext(TokenContext)
   return (
-    <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<Auth />} />
-      </Routes>
-    </BrowserRouter>
-  )
+    <div>
+        {tokenContext.token && (
+          <NavbarUser></NavbarUser>
+        )}
+      <Router></Router>
+    </div>
+  );
 }
 
-export default App
+export default App;

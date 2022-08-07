@@ -1,47 +1,54 @@
 .App {
-    background-color: white;
-  }
-  
-  .Auth-form-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: white;
-    width: 100vw;
-    height: 100vh;
-  }
+  background-color: white;
+}
+*{
+  font-family: Arial, Helvetica, sans-serif;
 
-  .CmanagerLogo{
-    display: flex;
-    justify-content: center;
-    align-items: center;
+}
+.Auth-form-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(219, 219, 219, 0);
+  width: 100vw;
+  height: 100vh;
+}
 
-  }
-  
-  .Auth-form {
-    width: 520px;
-    box-shadow: rgb(0 0 0 / 16%) 1px 1px 10px;
-    padding-top: 30px;
-    padding-bottom: 20px;
-    border-radius: 8px;
-    background-color: white;
-  }
-  
-  .Auth-form-content {
-    padding-left: 10%;
-    padding-right: 10%;
-  }
-  
-  .Auth-form-title {
-    text-align: center;
-    margin-bottom: 1em;
-    font-size: 30px;
-    color: rgb(34, 34, 34);
-    font-weight: 800;
-  }
-  
-  label {
-    font-size: 18px;
-    font-weight: 600;
-    color: rgb(34, 34, 34);
-  }
+.CmanagerLogo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.Auth-form {
+  width: 520px;
+  box-shadow: rgb(0 0 0 / 16%) 1px 1px 10px;
+  padding-top: 30px;
+  padding-bottom: 20px;
+  border-radius: 8px;
+  background-color: white;
+}
+
+
+.Auth-form-content {
+  padding-left: 10%;
+  padding-right: 10%;
+  padding-bottom: 6%;
+}
+
+.Auth-form-title {
+  text-align: center;
+  margin-bottom: 1em;
+  font-size: 30px;
+  color: rgb(34, 34, 34);
+  font-weight: 800;
+}
+.erro-ao-logar {
+  color: rgba(233, 0, 0, 0.753);
+}
+
+label {
+  font-size: 18px;
+  font-weight: 600;
+  color: rgb(34, 34, 34);
+}
