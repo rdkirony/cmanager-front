@@ -1,6 +1,3 @@
-.info{
-    
-}
 .Card-conteudo{
     color: black;
 }
@@ -10,15 +7,15 @@
 .Card-opcoes{
     width: 200px;
     border-style: solid;
-    border-color: #d8d9ee;
+    border-color: #6E8BEA;
     border-radius: 5%;
     text-align: center;
     display: block;
-    border-width: 3px;
+    border-width: 2px;
     background-color: white;
 }
 
 .Card-opcoes:hover{
-    border-color: #1421d1;
+    border-color: #051857;
     transition: 0.4s;
 }

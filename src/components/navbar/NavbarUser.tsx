@@ -1,40 +1,35 @@
-import { useEffect, useState } from "react";
-import { Container, Dropdown, DropdownButton, Navbar } from "react-bootstrap";
-import { Pessoa } from "../../entitys/Pessoa";
-import { pessoaInfos } from "../../services/user";
+import { useContext } from "react";
+import { Container, Navbar } from "react-bootstrap";
+import UserContext from "../../context/UserContext";
 import "./Style.css";
 
 export function NavbarUser() {
-  const [pessoa, setPessoa] = useState<Pessoa>();
-  useEffect(() => {
-    pessoaInfos().then(
-      (response) => {
-        setPessoa(response);
-      },
-      (error) => {
-        const resMessage =
-          (error.response &&
-            error.response.data &&
-            error.response.data.message) ||
-          error.message ||
-          error.toString();
-        console.log(resMessage);
-      }
-    );
-  }, []);
-
+  const handleClick = (event: { preventDefault: () => void }) => {
+    event.preventDefault();
+    localStorage.clear();
+    window.location.reload();
+  };
+  const {usuario} = useContext(UserContext);
+  
   return (
-    <Navbar className="Menu-users">
-      <Container>
-        <Navbar.Brand href="/opcoes" className="Menu-users-logo">
-          Cmanager
-        </Navbar.Brand>
-        <Navbar.Collapse className="justify-content-end">
-          <Navbar.Text>
-            Usuário: <a href="#login">{pessoa?.nome}</a>
-          </Navbar.Text>
-        </Navbar.Collapse>
-      </Container>
-    </Navbar>
+      <Navbar className="Menu-users">
+        <Container className="Container-menu-users">
+          <Navbar.Brand href="/opcoes" className="Menu-users-logo">
+            Cmanager
+          </Navbar.Brand>
+          <Navbar.Collapse className="justify-content-end">
+            <Navbar.Text className="Login-texto">
+              <p>Olá, {usuario.pessoaDto?.nome!.split(" ")[0]}</p>
+              <p>
+                {" "}
+                <a href="/minha-conta">Minha conta </a> |{" "}
+                <button id="logout" onClick={handleClick}>
+                  Sair{" "}
+                </button>{" "}
+              </p>
+            </Navbar.Text>
+          </Navbar.Collapse>
+        </Container>
+      </Navbar>
   );
 }

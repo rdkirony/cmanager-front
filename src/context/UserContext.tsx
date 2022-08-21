@@ -1,34 +1,50 @@
-import { createContext } from "react";
+import {
+  createContext,
+  ReactNode,
+  useEffect,
+  useState,
+} from "react";
+import { Usuario } from "../entitys/Usuario";
+import { usuariosInfos } from "../services/user";
 
-type PerfilProps = {
-    id:number,
-    nome:string,
-    descricao:string
+interface UsuarioContextData {
+  usuario: Usuario;
+  alterarUsuario: (usuario: Usuario) => void
 }
 
-type PessoaProps = {
-    id:number,
-    setId:(id:string) =>void
-    nome:string,
-    setNome:(nome:string) =>void
-    cpf?:string,
-    setCpf: () =>{}
-    email?:string,
-    setEmail : () =>{}
-    endereco?:string,
-    setEndereco:() =>{}
+interface UsuarioProviderProps {
+  children: ReactNode;
 }
 
-type UserProps = {
-    pessoa?:PessoaProps,
-    token: string,
-    perfil?:PerfilProps,
-    id:number | undefined,
-}
-
-const UserContext = createContext<UserProps>({
-    id:undefined,
-    token:""
-})
+const UserContext = createContext<UsuarioContextData>({} as UsuarioContextData);
 
 export default UserContext;
+
+export function UsuarioProvider({ children }: UsuarioProviderProps) {
+  const [usuario, setUsuario] = useState<Usuario>({} as Usuario);
+
+  
+  function alterarUsuario(usuario: Usuario) {
+    setUsuario(usuario)
+  }
+
+  useEffect(() => {
+    usuariosInfos().then(
+      (response) => {
+        setUsuario(response);
+      },
+      (error) => {
+        const resMessage =
+          (error.response &&
+            error.response.data &&
+            error.response.data.message) ||
+          error.message ||
+          error.toString();
+        console.log(resMessage);
+      }
+    );
+  }, []);
+  return (
+    <UserContext.Provider value={{ usuario,alterarUsuario }}>{children}</UserContext.Provider>
+  );
+}
