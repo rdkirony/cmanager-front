@@ -59,12 +59,31 @@ export const buscarPessoaPeloId = (id:string) =>{
     })
 }
 
-export const listaPessoas =(page:number)=>{
+export const listaPessoas =(page:number, nome:String)=>{
   return Api
-  .get(`/pessoas${getListaUrlPage(page)}`, {
+  .get(`/pessoas${getListaUrlPage(page)}${nome && page >0?`&nome=${nome}`:nome?`?nome=${nome}`:""}`, {
   }
   )
   .then((response) => {
     return response.data
   })
+}
+
+export const listaUsuarios =(page:number, nome:String)=>{
+  return Api
+  .get(`/usuarios${getListaUrlPage(page)}${nome && page >0?`&nome=${nome}`:nome?`?nome=${nome}`:""}`, {
+  }
+  )
+  .then((response) => {
+    return response.data
+  })
+}
+export const buscarUsuarioPeloId = (id:string) =>{
+  return Api
+    .get("/usuarios/" + id, {
+    }
+    )
+    .then((response) => {
+      return response.data
+    })
 }

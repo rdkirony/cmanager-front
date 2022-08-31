@@ -1,0 +1,12 @@
+.Container-Pesquisa-Usuarios{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+    padding: 2% 2% 0% 2%;
+    gap: 10px;
+}
+.Nome-form-pesquisa{
+    width: 500px;
+}

@@ -1,4 +1,4 @@
-.Container-card-pessoa{
+.Container-card-usuario{
     width: 250px;
     height: 250px;
     border-style: solid;
@@ -12,14 +12,8 @@
     position: relative;
     cursor: pointer;
 }
-.Container-card-pessoa:hover{
+.Container-card-usuario:hover{
     transition: 0.2s;
     border-color: #2c2a2a;
    
-}
-.Img-card-pessoa{
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    left: 0;
 }

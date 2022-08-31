@@ -1,15 +1,10 @@
-import {
-  createContext,
-  ReactNode,
-  useEffect,
-  useState,
-} from "react";
+import { createContext, ReactNode, useEffect, useState } from "react";
 import { Usuario } from "../entitys/Usuario";
 import { usuariosInfos } from "../services/user";
 
 interface UsuarioContextData {
   usuario: Usuario;
-  alterarUsuario: (usuario: Usuario) => void
+  alterarUsuario: (usuario: Usuario) => void;
 }
 
 interface UsuarioProviderProps {
@@ -23,9 +18,8 @@ export default UserContext;
 export function UsuarioProvider({ children }: UsuarioProviderProps) {
   const [usuario, setUsuario] = useState<Usuario>({} as Usuario);
 
-  
   function alterarUsuario(usuario: Usuario) {
-    setUsuario(usuario)
+    setUsuario(usuario);
   }
 
   useEffect(() => {
@@ -45,6 +39,8 @@ export function UsuarioProvider({ children }: UsuarioProviderProps) {
     );
   }, []);
   return (
-    <UserContext.Provider value={{ usuario,alterarUsuario }}>{children}</UserContext.Provider>
+    <UserContext.Provider value={{ usuario, alterarUsuario }}>
+      {children}
+    </UserContext.Provider>
   );
 }

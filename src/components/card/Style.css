@@ -7,7 +7,7 @@
 .Card-opcoes{
     width: 200px;
     border-style: solid;
-    border-color: #6E8BEA;
+    border-color: #737373;
     border-radius: 5%;
     text-align: center;
     display: block;
@@ -16,6 +16,6 @@
 }
 
 .Card-opcoes:hover{
-    border-color: #051857;
+    border-color: #2c2a2a;
     transition: 0.4s;
 }

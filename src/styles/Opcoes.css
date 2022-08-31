@@ -12,3 +12,7 @@
 .Opcoes-menu li a{
     text-decoration: none;
 }
+.Opcoes-menu img{
+    width: 128px;
+    height: 128px;
+}

@@ -5,6 +5,10 @@ import profImage from "../imgs/opcoes/man.png";
 import question from "../imgs/opcoes/question.png";
 import profile from "../imgs/opcoes/architect.png";
 import calendar from "../imgs/opcoes/calendar.png";
+import perfis from "../imgs/opcoes/1.png";
+import professores from "../imgs/opcoes/2.png";
+import semestres from "../imgs/opcoes/3.png";
+import materias from "../imgs/opcoes/6.png";
 import { useContext, useEffect } from "react";
 import TokenContext from "../context/TokenContext";
 import { useNavigate } from "react-router-dom";
@@ -22,9 +26,9 @@ export function Opcoes() {
       <div className="Opcoes-menu">
         <ul>
           <li>
-            <a href="">
+            <a href="usuarios">
               {" "}
-              <Card image={userImage} text="Gerenciar Usuários"></Card>
+              <Card image={professores} text="Gerenciar Usuários"></Card>
             </a>
           </li>
           <li>
@@ -35,16 +39,16 @@ export function Opcoes() {
           </li>
           <li>
             <a href="/perfis">
-              <Card image={profile} text="Gerenciar Perfis"></Card>
+              <Card image={perfis}  text="Gerenciar Perfis"></Card>
             </a>
           </li>
           <li>
             <a href="">
-              <Card image={calendar} text="Gerenciar Semestres"></Card>
+              <Card image={semestres} text="Gerenciar Semestres"></Card>
             </a>
           </li>
           <li>
-            <Card image={question} text="Gerenciar Matérias"></Card>
+            <Card image={materias} text="Gerenciar Matérias"></Card>
           </li>
         </ul>
       </div>

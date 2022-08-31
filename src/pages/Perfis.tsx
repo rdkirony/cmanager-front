@@ -1,12 +1,11 @@
 import { useContext, useEffect, useState } from "react";
-import { Card, Button } from "react-bootstrap";
 import { useNavigate } from "react-router-dom";
 import { CardPerfil } from "../components/cardPerfil/CardPerfil";
 import TokenContext from "../context/TokenContext";
 import { Perfil } from "../entitys/Perfil";
-import profImage from "../imgs/perfil/teacher.png";
-import businessman from "../imgs/perfil/businessman.png"
-import connection from "../imgs/perfil/coordination.png"
+import adm from "../imgs/perfil/4.png"
+import coord from "../imgs/perfil/5.png"
+import prof from "../imgs/perfil/2.png"
 import { listaPerfis } from "../services/perfil";
 import "../styles/Perfil.css";
 
@@ -39,19 +38,19 @@ export function Perfis() {
           if(perfil.id == 1){
             return (
               <li key={perfil.id}>
-                <CardPerfil image={businessman} perfil={perfil} ></CardPerfil>
+                <CardPerfil image={adm} perfil={perfil} ></CardPerfil>
               </li>
             );
           }else if(perfil.id ==2){
             return (
               <li key={perfil.id}>
-                <CardPerfil image={profImage} perfil={perfil} ></CardPerfil>
+                <CardPerfil image={prof} perfil={perfil} ></CardPerfil>
               </li>
             );
           }else if(perfil.id ==3){
             return (
               <li key={perfil.id}>
-                <CardPerfil image={connection} perfil={perfil} ></CardPerfil>
+                <CardPerfil image={coord} perfil={perfil} ></CardPerfil>
               </li>
             );
           }

@@ -1,25 +1,31 @@
-import React, { SetStateAction, useEffect } from "react";
+import React, { SetStateAction, useContext, useEffect } from "react";
 import { useState } from "react";
 import { Button, Card, Col, Container, Table } from "react-bootstrap";
 import ReactPaginate from "react-paginate";
 import { Pessoa } from "../../entitys/Pessoa";
 import { buscarPessoaPeloId, listaPessoas } from "../../services/user";
 import { PessoaInfoModal } from "./PessoaInfoModal";
-import "./Style.css";
+import "./ListaPessoas.css";
+import  Teacher  from   "../../imgs/cardPessoa/teacher.png";
+import  Teacher2  from   "../../imgs/cardPessoa/teacher2.png";
+import  Teacher3  from   "../../imgs/cardPessoa/teacher3.png";
+import  Teacher4  from   "../../imgs/cardPessoa/teacher4.png";
+import { CardPessoa } from "../carPessoa/CardPessoa";
+import UserListaPessoasContext from "../../context/ListPessoasContext";
+
 
 export function ListPessoas() {
-  const [users, setUsers] = useState<Pessoa[]>([]);
+  const { users, alterarPessoas, pageCount, alterarPageCount } = useContext(UserListaPessoasContext);
   const [isCriarNovaPessoaOpen, setIsCriarNovaPessoaOpen] = useState(false);
   const [pessoa, setPessoa] = useState<Pessoa>({} as Pessoa);
   const [loading, setLoading] = useState(false);
-  const [pageCount, setPageCount] = useState<number>(0);
   const [displayUsers, setDisplayUsers] = useState<JSX.Element>();
 
   useEffect(() => {
-    listaPessoas(0).then(
+    listaPessoas(0,"").then(
       (response) => {
-        setUsers(response.content);
-        setPageCount(response.totalPages);
+        alterarPessoas(response.content);
+        alterarPageCount(response.totalPages);
         setLoading(true);
       },
       (error) => {
@@ -37,41 +43,55 @@ export function ListPessoas() {
     setDisplayUsers(DisplayList());
   }, [users]);
 
+  function getRandomInt(min: number, max: number) {
+    min = Math.ceil(min);
+    max = Math.floor(max);
+    return Math.floor(Math.random() * (max - min) + min);
+  }
   function DisplayList() {
     return (
-      <Table striped className="Table-pessoas">
-        <thead>
-          <tr>
-            <th>Nome</th>
-            <th>Email</th>
-            <th>Cpf</th>
-            <th>Endereço</th>
-          </tr>
-        </thead>
-        <tbody>
-          {users.map((user) => {
+      <div className="Cards-lista-pessoas">
+        {users.map((user) => {
+          let val = getRandomInt(0,4)
+          if(val ==0){
             return (
-              <tr
-                key={user.id}
-                id={user.id.toString()}
-                className="Tr-pessoas"
-                onClick={handleAbrirModalPessoa}
-              >
-                <td>{user.nome}</td>
-                <td>{user.email}</td>
-                <td>{user.cpf}</td>
-                <td>{user.endereco}</td>
-              </tr>
+              <div onClick={handleAbrirModalPessoa}>
+                <CardPessoa image={Teacher} pessoa={user}>
+                </CardPessoa>
+              </div>
             );
-          })}
-        </tbody>
-      </Table>
+          }else if(val == 1){
+            return(
+              <div onClick={handleAbrirModalPessoa}>
+                <CardPessoa image={Teacher2} pessoa={user}>
+                </CardPessoa>
+              </div>
+            )
+          }else if(val == 2){
+            return(
+              <div onClick={handleAbrirModalPessoa}>
+                <CardPessoa image={Teacher3} pessoa={user}>
+                </CardPessoa>
+              </div>
+            )
+          }else{
+            return(
+              <div onClick={handleAbrirModalPessoa}>
+                <CardPessoa image={Teacher4} pessoa={user}>
+                </CardPessoa>
+              </div>
+            )
+          }
+
+        })}
+      </div>
     );
   }
 
+
   function handleAbrirModalPessoa(e: any) {
     console.log(e.currentTarget.id);
-    buscarPessoaPeloId(e.currentTarget.id).then(
+    buscarPessoaPeloId(e.currentTarget.firstElementChild.id).then(
       (response) => {
         console.log(response);
         setPessoa(response);
@@ -94,9 +114,9 @@ export function ListPessoas() {
   }
 
   function changePage({ selected }: { selected: number }) {
-    listaPessoas(selected).then(
+    listaPessoas(selected,"").then(
       (response) => {
-        setUsers(response.content);
+        alterarPessoas(response.content);
       },
       (error) => {
         const resMessage =
@@ -111,21 +131,24 @@ export function ListPessoas() {
   }
 
   return loading ? (
-    <div className="App">
-      {displayUsers}
-      <ReactPaginate
-        previousLabel={"Anterior"}
-        nextLabel={"Próxima"}
-        pageCount={pageCount}
-        onPageChange={changePage}
-        containerClassName={"paginationBttns"}
-        previousLinkClassName={"previousBttn"}
-        nextLinkClassName={"nextBttn"}
-        disabledClassName={"paginationDisabled"}
-        activeClassName={"paginationActive"}
-        breakLabel="..."
-        pageRangeDisplayed={2}
-      />
+    <div>
+      <div>
+        {displayUsers}
+        <ReactPaginate
+          previousLabel={"Anterior"}
+          nextLabel={"Próxima"}
+          pageCount={pageCount}
+          onPageChange={changePage}
+          containerClassName={"paginationBttns"}
+          previousLinkClassName={"previousBttn"}
+          nextLinkClassName={"nextBttn"}
+          disabledClassName={"paginationDisabled"}
+          activeClassName={"paginationActive"}
+          breakLabel="..."
+          pageRangeDisplayed={2}
+          
+        />
+      </div>
       <PessoaInfoModal
         isOpen={isCriarNovaPessoaOpen}
         fecharModal={handleFecharModalPessoa}

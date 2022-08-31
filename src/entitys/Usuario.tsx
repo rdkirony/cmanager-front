@@ -5,6 +5,6 @@ import { Pessoa } from "./Pessoa"
 export interface Usuario {
     pessoaDto?:Partial<Pessoa>,
     perfilDto?:Partial<Perfil>,
-    id:number | undefined,
+    id:number,
     login:string | undefined,
 }
