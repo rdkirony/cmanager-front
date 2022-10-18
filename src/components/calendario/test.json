@@ -1,0 +1,115 @@
+{
+  "periodo": [
+    {
+      "dia": [
+        {
+          "listaMateriaPessoa": [
+            {
+              "materia": {
+                "nome": "Fundamentos de Teoria da Computação"
+              },
+              "pessoa": {
+                "nome": "Marcos Mansano Furlan"
+              }
+            }
+          ]
+        },
+        {
+          "listaMateriaPessoa": [
+            {
+              "materia": {
+                "nome": "Tecnologias da Informação e Comunicação"
+              },
+              "pessoa": {
+                "nome": "Rosenilda Marques"
+              }
+            }
+          ]
+        },
+        {
+          "listaMateriaPessoa": [
+            {
+              "materia": {
+                "nome": "Álgebra Linear e Geometria Analítica"
+              },
+              "pessoa": {
+                "nome": "Robledo Maks Miranda"
+              }
+            }
+          ]
+        },
+        {
+          "listaMateriaPessoa": []
+        },
+        {
+          "listaMateriaPessoa": []
+        }
+      ]
+    },
+    {
+      "dia": [
+        {
+          "listaMateriaPessoa": []
+        },
+        {
+          "listaMateriaPessoa": [
+            {
+              "materia": {
+                "nome": "Probabilidade e Estatística"
+              },
+              "pessoa": {
+                "nome": "Luciano Antonio de Oliveira"
+              }
+            }
+          ]
+        },
+        {
+          "listaMateriaPessoa": [
+            {
+              "materia": {
+                "nome": "Desenho por Computador"
+              },
+              "pessoa": {
+                "nome": "Vanderson Hafemann Fragal"
+              }
+            }
+          ]
+        },
+        {
+          "listaMateriaPessoa": [
+            {
+              "materia": {
+                "nome": "Laboratório de Desenho por Computador"
+              },
+              "pessoa": {
+                "nome": "Vanderson Hafemann Fragal"
+              }
+            }
+          ]
+        },
+        {
+          "listaMateriaPessoa": []
+        }
+      ]
+    },
+    {
+      "dia": [
+        {
+          "listaMateriaPessoa": []
+        },
+        {
+          "listaMateriaPessoa": []
+        },
+        {
+          "listaMateriaPessoa": []
+        },
+        {
+          "listaMateriaPessoa": []
+        },
+        {
+          "listaMateriaPessoa": []
+        }
+      ]
+    }
+  ]
+}

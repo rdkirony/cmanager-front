@@ -1,0 +1,115 @@
+{
+  "periodo": [
+    {
+      "dia": [
+        {
+          "listaMateriaPessoa": []
+        },
+        {
+          "listaMateriaPessoa": [
+            {
+              "materia": {
+                "nome": "Governança de TI (Eletiva III)"
+              },
+              "pessoa": {
+                "nome": "Evanise Caldas"
+              }
+            }
+          ]
+        },
+        {
+          "listaMateriaPessoa": [
+            {
+              "materia": {
+                "nome": "Métodos Numéricos para Computação"
+              },
+              "pessoa": {
+                "nome": "Wellington Lima"
+              }
+            }
+          ]
+        },
+        {
+          "listaMateriaPessoa": [
+            {
+              "materia": {
+                "nome": "Algoritmos e Estruturas de Dados III"
+              },
+              "pessoa": {
+                "nome": "Wellington Lima"
+              }
+            }
+          ]
+        },
+        {
+          "listaMateriaPessoa": []
+        }
+      ]
+    },
+    {
+      "dia": [
+        {
+          "listaMateriaPessoa": [
+            {
+              "materia": {
+                "nome": "Informática na Educação (Eletiva IV)"
+              },
+              "pessoa": {
+                "nome": "Valguima Victoria"
+              }
+            }
+          ]
+        },
+        {
+          "listaMateriaPessoa": [
+            {
+              "materia": {
+                "nome": "Física II"
+              },
+              "pessoa": {
+                "nome": "Adao Antonio"
+              }
+            }
+          ]
+        },
+        {
+          "listaMateriaPessoa": []
+        },
+        {
+          "listaMateriaPessoa": [
+            {
+              "materia": {
+                "nome": "Cálculo Diferencial e Integral III"
+              },
+              "pessoa": {
+                "nome": "Jean Renel"
+              }
+            }
+          ]
+        },
+        {
+          "listaMateriaPessoa": []
+        }
+      ]
+    },
+    {
+      "dia": [
+        {
+          "listaMateriaPessoa": []
+        },
+        {
+          "listaMateriaPessoa": []
+        },
+        {
+          "listaMateriaPessoa": []
+        },
+        {
+          "listaMateriaPessoa": []
+        },
+        {
+          "listaMateriaPessoa": []
+        }
+      ]
+    }
+  ]
+}

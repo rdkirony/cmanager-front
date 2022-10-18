@@ -1,0 +1,75 @@
+
+
+.containerFilhoSemestre{
+    display: flex;
+    flex-direction: row;
+    max-width: 1000px;
+    margin: 0 auto;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 2%;
+    margin-bottom: 2%;
+}
+.dataSemestre{
+    flex-direction: column;
+    width: 450px;
+ 
+}
+.dataAlocacao{
+    flex-direction: column;
+    width: 450px;
+   
+}
+#textoData{
+    font-size: x-large;
+    text-shadow: 0 0 2px #c1cae7;
+    border-width:0px 0px 3px 0px;
+    border-style:solid;
+    border-color:#8a8a8a;
+}
+.containerSelecionarMaterias{
+    display: flex;
+    flex-direction: row;
+    max-width: 1200px;
+    margin: 0 auto;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.materiasSelecionar{
+    width: 450px;
+    background-color: white;
+    padding: 2%;
+}
+.materiasSelecionadas{
+    width: 450px;
+    background-color: white;
+    padding: 2%;
+}
+#selecionar{
+    border-width:0px 0px 3px 0px;
+    border-style:solid;
+    border-color: #8a8a8a;
+    border-width: 100%;
+}
+.buttonsMaterias{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    margin: 0 auto;
+}
+.materiasSelecionar .selecionado{
+    background-color: #b4c1ee;
+}
+#textoContainer{
+    text-align: center;
+    font-size: x-large;
+}
+.salvarInformacoes{
+    max-width: 1200px;
+    margin: 0 auto;
+    margin-top: 2%;
+    align-items: center;
+    text-align: center;
+}

@@ -7,13 +7,14 @@ interface FormGroupProps{
     className:string,
     typeForm:string,
     placeHolder:string,
-    alterarUsuario?: (value:string) => void
+    alterarUsuario?: (value:string) => void,
+    id?:string
 }
 
 
 export function FormGroupComponent(props:FormGroupProps) {
   return (
-    <Form.Group className={props.className} controlId="formBasicEmail">
+    <Form.Group className={props.className} controlId="formBasicEmail" id={props?.id}>
       <Form.Label>{props.formDescricao}</Form.Label>
       <Form.Control
         type={props.typeForm}

@@ -38,16 +38,6 @@ export function Auth() {
 
   return (
     <div>
-      <div className="Auth-header">
-        <ul>
-          <li>
-            <img src={graduation} alt="" />
-          </li>
-          <li>
-            <h1>CManager</h1>
-          </li>
-        </ul>
-      </div>
       <div className="Auth-form-container">
         <form className="Auth-form row" onSubmit={handleSubmit}>
           <div className="Auth-form-content">

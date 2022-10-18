@@ -9,6 +9,9 @@ import "./ListaUsuarios.css";
 import UserListaUsuariosContext from "../../context/ListUsuariosContext";
 import { CardUsuario } from "../cardUsuario/CardUsuario";
 import { Usuario } from "../../entitys/Usuario";
+import adm from "../../imgs/perfil/3.png"
+import coord from "../../imgs/perfil/2.png"
+import prof from "../../imgs/perfil/1.png"
 
 export function ListUsuarios() {
   const { users, alterarUsuarios, pageCount, alterarPageCount } = useContext(
@@ -45,9 +48,17 @@ export function ListUsuarios() {
     return (
       <div className="Cards-lista-usuarios">
         {users.map((user) => {
+          let img = "";
+          if(user.perfilDto?.id == 3){
+            img = coord;
+          }else if(user.perfilDto?.id == 2){
+            img = prof;
+          }else {
+            img = adm;
+          }
           return (
             <div onClick={handleAbrirModalUsuario}>
-              <CardUsuario usuario={user}></CardUsuario>
+              <CardUsuario usuario={user} img={img}></CardUsuario>
             </div>
           );
         })}

@@ -1,0 +1,38 @@
+.InfoMateriasCalendario {
+  width: 300px;
+  height: 80px;
+  position: relative;
+  background-color: transparent;
+  border-style: solid;
+  border-color: #d6d6d6;
+  box-shadow: 1px 1px #bdbdbd;
+  border-radius: 2%;
+  border-width: 1px;
+  padding-top: 2%;
+  text-align: center;
+
+}
+#TituloCalendario {
+  text-align: center;
+  font-size: x-large;
+}
+#MateriaInfoNome{
+    font-size: small;
+}
+#PessoaInfoNome{
+    position: absolute;
+    text-align: center;
+    align-content: center;
+    color: #727272;
+    bottom: 0;
+    width: 100%;
+}
+#InfoLivre{
+    font-size: larger;
+}
+.ConteudoSelecionavel{
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 3%;
+   
+}

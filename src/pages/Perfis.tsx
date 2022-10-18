@@ -3,9 +3,9 @@ import { useNavigate } from "react-router-dom";
 import { CardPerfil } from "../components/cardPerfil/CardPerfil";
 import TokenContext from "../context/TokenContext";
 import { Perfil } from "../entitys/Perfil";
-import adm from "../imgs/perfil/4.png"
-import coord from "../imgs/perfil/5.png"
-import prof from "../imgs/perfil/2.png"
+import adm from "../imgs/perfil/3.png"
+import coord from "../imgs/perfil/2.png"
+import prof from "../imgs/perfil/1.png"
 import { listaPerfis } from "../services/perfil";
 import "../styles/Perfil.css";
 

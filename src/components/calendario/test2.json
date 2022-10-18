@@ -1,0 +1,124 @@
+{
+  "periodo": [
+    {
+      "dia": [
+        {
+          "listaMateriaPessoa": [
+            {
+              "materia": {
+                "nome": "Cálculo Diferencial e Integral II"
+              },
+              "pessoa": {
+                "nome": "Karla Katerine Barboza"
+              }
+            }
+          ]
+        },
+        {
+          "listaMateriaPessoa": [
+            {
+              "materia": {
+                "nome": "Laboratório de Eletrônica Digital"
+              },
+              "pessoa": {
+                "nome": "Carlos Elias"
+              }
+            }
+          ]
+        },
+        {
+          "listaMateriaPessoa": [
+            {
+              "materia": {
+                "nome": "Física I"
+              },
+              "pessoa": {
+                "nome": "Marcio Roberto"
+              }
+            }
+          ]
+        },
+        {
+          "listaMateriaPessoa": []
+        },
+        {
+          "listaMateriaPessoa": []
+        }
+      ]
+    },
+    {
+      "dia": [
+        {
+          "listaMateriaPessoa": [
+            {
+              "materia": {
+                "nome": "Arquitetura e Organização de Computadores"
+              },
+              "pessoa": {
+                "nome": "Rodrigo Sacchi"
+              }
+            }
+          ]
+        },
+        {
+          "listaMateriaPessoa": [
+            {
+              "materia": {
+                "nome": "Laboratório de Programação II"
+              },
+              "pessoa": {
+                "nome": "Anderson Bessa"
+              }
+            }
+          ]
+        },
+        {
+          "listaMateriaPessoa": [
+            {
+              "materia": {
+                "nome": "Algoritmos e Estruturas de Dados II"
+              },
+              "pessoa": {
+                "nome": "Rosenilda Marques"
+              }
+            }
+          ]
+        },
+        {
+          "listaMateriaPessoa": [
+            {
+              "materia": {
+                "nome": "Seminários (Eletiva II)"
+              },
+              "pessoa": {
+                "nome": "Claudia Regina"
+              }
+            }
+          ]
+        },
+        {
+          "listaMateriaPessoa": []
+        }
+      ]
+    },
+    {
+      "dia": [
+        {
+          "listaMateriaPessoa": []
+        },
+        {
+          "listaMateriaPessoa": []
+        },
+        {
+          "listaMateriaPessoa": []
+        },
+        {
+          "listaMateriaPessoa": []
+        },
+        {
+          "listaMateriaPessoa": []
+        }
+      ]
+    }
+  ]
+}

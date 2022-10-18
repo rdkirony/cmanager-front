@@ -7,4 +7,5 @@ export interface Usuario {
     perfilDto?:Partial<Perfil>,
     id:number,
     login:string | undefined,
+    senha:string
 }
